@@ -1,0 +1,82 @@
+---
+title: "Taller #1 Servicios Geoespaciales"
+author: "Juan Sebastián Daza López"
+format:
+  html: default
+  pdf: default
+---
+
+# PARTE #1
+
+# Tabla de Fuentes
+
+| Tipo      | URL / Fuente                                                                 | Archivo Local                    | Sistema de Coordenadas |
+|-----------|------------------------------------------------------------------------------|----------------------------------|------------------------|
+| Shapefile | https://simplemaps.com/gis/country/co (descarga de límites de Colombia)      | colombia_admin.shp               | EPSG:4326              |
+| GeoTIFF   | https://download.osgeo.org/geotiff/samples/ (archivo de elevación de ejemplo) | elevation.tif                    | EPSG:4326              |
+| WMS       | https://www.colombiaenmapas.gov.co/ (catálogo de servicios del IGAC)         |                              | EPSG:4326              |
+| WFS       | https://www.colombiaenmapas.gov.co/ (catálogo de servicios del IGAC)         |                             | EPSG:4326              |
+| Otras    | https://www.igac.gov.co/datos-abiertos-geoespaciales (cartografía oficial)     |  | EPSG:4326              |
+
+
+
+
+---
+
+# PARTE #2
+
+## Mapa generado en QGIS
+
+![Mapa QGIS](Mapa%20de%20Colombia.pdf)
+
+---
+
+# ❓ Cuestionario de Análisis
+
+## 1️⃣ ¿Qué archivos/servicios permiten la edición de geometrías directamente?
+
+Los archivos que permiten la edición de geometrias son los siguientes: 
+- Shapefile
+- GeoPackage
+- WFS-T (si el servidor lo permite)
+
+Los archivos de tipo WMS y WCS no permiten esta edición directa.
+
+---
+
+## 2️⃣ ¿Cuáles permiten acceso a la tabla de atributos?
+
+De los archivos evaluados y empleados, aquellos que permiten acceso a la tabla de atributos son:
+
+- Shapefile
+- WFS
+- GeoPackage
+
+Un ejemplo de de esta tabla de atributos y de los campos que se pueden encontrar dentro de de un Shapefile de países (como los que se emplearon para obtener el mapa de Colombia desarrollado en QGIS) se lista a continuación:
+
+- NAME → Nombre del país
+- POP_EST → Población estimada
+- CONTINENT → Continente
+
+---
+
+## 3️⃣ ¿En qué casos fue posible cambiar la simbología desde el software cliente?
+
+Fue posible en:
+
+- WFS
+- Shapefile
+- GeoTIFF
+
+No fue posible en WMS (la simbología está definida en el servidor).
+
+---
+
+## 4️⃣ ¿Por qué es preferible usar un WFS sobre un Shapefile descargado en proyectos a largo plazo?
+
+Porque:
+
+- Los datos se mantienen actualizados
+- Se evita duplicación de información
+- Permite edición remota (si es WFS-T)
+- Facilita trabajo colaborativo
