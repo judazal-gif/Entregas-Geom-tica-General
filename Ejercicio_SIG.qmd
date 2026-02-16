@@ -29,6 +29,10 @@ format:
 
 ![Mapa QGIS](Mapa%20de%20Colombia.pdf)
 
+## Mapa generado en ArcGIS
+
+![Mapa ArcGIS](Mapa%20colombia%20ArcGIS.pdf)
+
 ---
 
 # ❓ Cuestionario de Análisis
