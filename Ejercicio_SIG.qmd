@@ -1,5 +1,5 @@
 ---
-title: "Taller #1 Servicios Geoespaciales"
+title: "Taller #2 Coordenadas ArcGIS pro"
 author: "Juan Sebastián Daza López"
 format:
   html: default
