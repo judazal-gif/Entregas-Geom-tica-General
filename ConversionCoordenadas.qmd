@@ -1,0 +1,59 @@
+---
+title: "Taller #3 Conversión de formatos"
+author: Juan Sebastián Daza López 
+format:
+  html: default
+  pdf: default
+---
+### **PARTE 1**
+
+## **A. Archivo .kmz generado en el Ejercicio 1.**
+
+El archivo .kmz generado se encuentra en los archivos añadidos al github bajo el nombre "Taller 3 pt1.kmz"; Adicional al archivo .kmz solicitado, adjunto la visualización en Google Earth del archivo .kml una vez descargado y subido a esta plataforma.  
+
+![Archivo .kml visualizado en Google Earth](imagenes/kml%20en%20google%20earth.jpg)
+**Figura.1** *Archivo .kml visualizado en Google Earth*
+
+## **B. Tabla de atributos en PostGIS.**
+
+A continuación se adjunta la captura de pantalla donde se evidencia la tabla de atributos la cual se consultó en **PostGIS** desde el **DB Manager** de QGIS, esta para facilidad del ejercicio fue nombrada "Municipios final"
+
+![Tabla de atributos](imagenes/Captura%20de%20pantalla%20de%20tabla%20de%20atributos.jpg)
+**Tabla.1** *Tabla de atributos*
+
+
+De manera adicional, se adjunta una captura de la vista previa de los municipios seleccionados (municipios que no tuviesen nombre compuesto y que se encontrasen en un radio de 40 kilómetros de las coordenadas suministradas, radio que se obtuvo mediante la implementación de un buffer) a manera de mapa, es decir, la capa resultante obtenida luego de aplicarle todos los parámetros indicados
+
+![Municipios seleccionados](imagenes/Vista%20previa%20municipios%20seleccionados%20con%20buffer.jpg)
+**Figura.2** *Municipios seleccionados por nombre y buffer de 4o kilómetros*
+
+De igual manera, en la carpeta "Datos adicionales" se encuentran los datos de todas las capas empleadas asi como del buffer efectuado.
+
+---
+
+### **PARTE 2**
+
+## Documento analítico/CUESTIONARIO ❓
+
+1️⃣ 
+***1.1 ¿Por qué es un error intentar abrir un KML con coordenadas planas (metros) en Google Earth?***
+
+  Es un error debido a que el formato KML utiliza exclusivamente el sistema de coordenadas geográficas WGS84 (EPSG:4326), por este motivo, si se exporta un archivo con coordenadas planas en metros, Google Earth no puede interpretarlas correctamente ya que su sistema operativo utiliza grados en lugar de metros.
+
+***1.2 ¿Por qué decimos que este visor no tiene “proyección al vuelo”?***
+
+  La proyección al vuelo es básicamente una herramienta que muestra capas que tienen diferentes sistemas de coordenadas (CRS) sin necesidad de reproyectarlas físicamente, Google Earth no posee un sistema de proyección al vuelo, siempre espera que se le suministren las coordenadas geográficas en grados (latitud/longitud, WGS84) y no puede tomar capas en CRS proyectado (metros) y mostrarlas correctamente automáticamente.
+
+---
+
+2️⃣ 
+***2.1 ¿Es más eficiente realizar primero el filtro por nombre (Atributos) o el filtro por radio de 40 km (Espacial)? Justifique su decisión pensando en el ahorro de memoria del computador.***
+
+  Es más eficiente aplicar primero el filtro por atributos, ya que con esto se reduce significativamente la cantidad de registros antes de iniciar a realizar las operaciones espaciales; estas operaciones  requieren mayor uso de memoria y procesamiento, por lo que reducir previamente el número de entidades a utilizar mejora el rendimiento del proceso y tiene de esta manera un menor impacto en la memoria del computador ahorrando espacio que no es necesario emplear. 
+
+---
+
+3️⃣ 
+***3.1 ¿Por qué usar QGIS como “puente” facilita la carga de datos hacia PostgreSQL/PostGIS?*** 
+
+  QGIS permite escribir directamente en bases PostgreSQL/PostGIS utilizando la librería GDAL/OGR, lo que facilita la importación de datos sin requerir configuraciones adicionales de esquemas o permisos. Por esta razón, QGIS se puede utilizar con una facilidad mucho mayor frente a ArcGIS, debido a su conexión entre diferentes formatos y plataformas SIG.
