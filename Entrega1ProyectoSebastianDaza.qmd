@@ -1,0 +1,98 @@
+---
+title: "Monitoreo del estado nutricional de cultivos mediante análisis de índices de vegetación y bandas espectrales (GNDVI y NDRE) utilizando imágenes satelitales multiespectrales en un cultivo de arroz en la región del Tolima"
+author: "Juan Sebastián Daza López"
+format:
+  html: default
+  pdf: default
+
+---
+# Introducción y justificación
+
+La producción comercial de cultivos es un sistema que engloba muchos componentes de vital importancia, los cuales deben de trabajar armónicamente para asegurar una producción ideal y económicamente viable; dentro de estos componentes se tienen algunos como: Salud del suelo, riego y drenaje, plagas y enfermedades, nutrición, fitomejoramiento, etc. de todos estos componentes mencionados, el monitoreo del estado nutricional de los cultivos es uno de los más importantes pero a la vez uno de los componentes más olvidados cuando se habla de optimización de la producción agrícola, esto debido a que la gran mayoría de productores solo se enfoca en utilizar la nutrición como una receta, aplicando las mismas cantidades en los mismos momentos y solo se detiene a realizar correcciones nutricionales cuando la deficiencia o la toxicidad ya se encuentra muy avanzada.
+
+En contextos donde la variabilidad climática, la disponibilidad de nutrientes y el manejo agronómico influyen directamente en el rendimiento, es importante entender que las tecnologías de teledetección han emergido como herramientas clave para evaluar la condición de la vegetación de manera no invasiva, a diferentes escalas espaciales y temporales y mucho mas eficientes que los monitoreos convencionales, ademas de tener una velocidad de análisis mayor a los métodos frecuentemente empleados como los análisis foliares.
+
+Entre la gran variedad de índices empleados en la agronomía, el NDVI ha sido el que más ampliamente se ha utilizado; sin embargo, índices más avanzados como el GNDVI  y el NDRE han demostrado tener una mayor  precisión al ser mas sensibles en detectar el contenido de clorofila y el estado nutricional de las plantas, particularmente en etapas fenológicas avanzadas. Estos índices aprovechan bandas específicas, como el verde y el rojo, que permiten detectar variaciones más sutiles en la condición fisiológica de los cultivos, frente al NDVI el cual es más general.
+
+En el contexto colombiano, y particularmente en el departamento de Tolima, caracterizado por su alta actividad agrícola y su importancia en la producción de arroz, el uso de estas herramientas representa una oportunidad para mejorar el monitoreo y la gestión de los sistemas productivos y con esto aumentar la producción de los cultivos disminuyendo posibles gastos asociados al manejo nutricional, por lo que es importante evaluar como estas nuevas bandas y estrategias (GNDVI y NDRE) presentan una oportunidad para mejorar el análisis de vegetación  y el monitoreo del estado nutricional de los cultivos. 
+
+---
+
+# Estado del Arte
+
+El monitoreo del estado nutricional de cultivos mediante teledetección, globalmente,  ha evolucionado significativamente, esto gracias al uso de imágenes multiespectrales y al desarrollo de nuevos índices de vegetación que sean cada vez más sensibles a las condiciones fisiológicas de las plantas. Diversos estudios han demostrado que índices como el GNDVI (Green Normalized Difference Vegetation Index) y el NDRE (Normalized Difference Red Edge Index) presentan ciertas ventajas frente a índices tradicionales como el NDVI, especialmente en la detección de variaciones en el contenido de clorofila y el estado nutricional (Guo & Ren, 2023 ; Ahmad *et al*., 2025).
+Investigaciones recientes han puesto en evidencia la efectividad del uso de sensores multiespectrales, tanto en plataformas satelitales como en vehículos aéreos no tripulados (UAV), para el seguimiento del crecimiento y desarrollo de cultivos como el arroz. Estudios basados en imágenes multiespectrales desarrollados en países asiáticos (principalmente China pero también Irán e Indonesia) han demostrado que índices como los ya mencionados presentan una mayor correlación con variables biofísicas clave, como la biomasa, el vigor vegetal y la concentración de clorofila a lo largo del ciclo fenológico del cultivo frente a la correlación que presenta el tan utilizado NDVI (Guo & Ren, 2023; Zhang *et al*., 2023). Estos resultados denotan la capacidad de dichos índices para capturar cambios dinámicos en la condición de la vegetación durante periodos de cultivo prolongados (de Lima *et al*., 2021).
+
+De igual manera, se ha demostrado que los índices basados en la región espectral del red-edge, son más sensibles a cambios en etapas avanzadas del desarrollo del cultivo, donde el NDVI tiende a saturarse y a perder precisión. En este contexto, el NDRE permite una mejor detección de deficiencias nutricionales, y aún más aquellas relacionadas con el nitrógeno, lo cual resulta clave para la implementación de estrategias de agricultura de precisión (Zhang *et al*., 2023). Por su parte, el GNDVI ha mostrado una alta sensibilidad al contenido de clorofila, lo que lo convierte en un indicador que podría reemplazar las funciones del tan utilizado SPAD el cual presenta el inconveniente de que debe ser utilizado planta por planta, complicando y retrasando las mediciones en un cultivo y más con las extensiones habituales que presenta cultivos como el arroz. El GNDVI brinda información robusta del estado nutricional en fases tempranas e intermedias del crecimiento vegetal (Ahmad *et al*., 2025).
+En adición a lo mencionado, una serie de estudios donde se empleó imágenes de satélites como Sentinel-2 destacaron la importancia de las bandas espectrales específicas, como el infrarrojo cercano (NIR) y las bandas red-edge, en la estimación de variables agronómicas puesto que estas bandas permiten mejorar la precisión en la predicción del rendimiento y en la identificación de zonas con estrés hídrico o deficiencias nutricionales dentro de los cultivos (Guo & Ren, 2023; de Lima *et al*., 2021).
+Debido a las ventajas que representan estos métodos, se ha observado una tendencia creciente hacia la integración de índices de vegetación con técnicas de análisis multitemporal y modelos de aprendizaje automático, lo que permite no solo evaluar el estado actual de los cultivos, sino también predecir su comportamiento futuro (Zhang *et al*., 2023). Este enfoque ha sido aplicado exitosamente en sistemas arroceros alrededor del mundo (y específicamente en China), donde la variabilidad espacial y temporal es un factor determinante en la productividad.
+
+Es evidente que el uso combinado de GNDVI y NDRE, junto con el análisis de bandas espectrales específicas, constituye una estrategia robusta para el monitoreo del estado nutricional de los cultivos. Sin embargo, aunque estos enfoques han sido ampliamente desarrollados a nivel internacional, su aplicación en contextos locales es sumamente limitada y la información frente a este tema es prácticamente inexistente, lo que impulsa la necesidad de desarrollar investigaciones y estudios que sirvan como puente para implementar en nuestro pais y en nuestros sistemas productivos, las tecnologías que en países mas desarrollados repercuten en tan provechosos beneficios en la producción agrícola. 
+
+---
+
+# Objetivos
+
+## General
+1.  Monitorear el estado nutricional de un cultivo de arroz en la región del Tolima mediante el análisis de índices de vegetación (GNDVI y NDRE), para identificar la variabilidad espacial del vigor vegetal y la existencia o ausencia de áreas con deficiencias nutricionales.
+
+## Específicos
+1.  Evaluar la distribución espacial del vigor y la salud en un cultivo de arroz en Tolima utilizando los índices GNDVI y NDRE, comparando su sensibilidad a variaciones en el contenido de clorofila y nitrógeno.
+
+2.  Integrar las imágenes satelitales multiespectrales con herramientas SIG para generar mapas de monitoreo que permitan la detección temprana de deficiencias nutricionales y apoyen en la toma de decisiones del manejo de la fertilidad.
+
+
+---
+
+# Área de Estudio
+
+Preliminarmente y para el contexto de esta entrega, el área de estudio se define como el departamento del Tolima (departamento que tiene el mayor volumen de producción de arroz el cual es el cultivo que muy posiblemente se utilice como modelo para los fines de este proyecto), más adelante se escogerá un municipio y un sistema productivo especifico (el cual se delimitara y en la siguiente entrega se tendrá el mapa completo del lugar de estudio) cuando ya se cuente con la información pertinente.
+
+### *Área de estudio*
+![:Mapa área de estudio](imagenes/Mapa%201.jpg)
+
+---
+
+# Fuentes de Datos
+
+Para este proyecto se utilizarán varias fuentes de datos satelitales y geoespaciales que permitirán calcular los índices de vegetación y generar mapas del estado nutricional de un cultivo de arroz, a continuación se listan los más importantes:
+
+1.  **Sentinel-2 (ESA / Copernicus Open Access Hub)**
+Por sus imágenes multiespectrales y la posibilidad de encontrar las siguientes bandas: 
+`Verde` (B3, 560 nm) para GNDVI
+`Rojo` (B4, 665 nm) para NDVI
+`Red-Edge` (B5, B6, B7 → 705–740 nm) para NDRE
+`Infrarrojo cercano` (B8, 842 nm) para ambos índices
+
+2.  **Google Earth Engine (GEE)**
+Por el acceso a catálogos globales de imágenes satelitales (Sentinel-2, Landsat 8/9, MODIS) el cual permite procesar los datos en la nube, filtrando  y generando series temporales sin descargar archivos pesados.
+
+3.  **Datos geoespaciales locales (Tolima)**
+Por ultimo es necesario el uso de Shapefiles o GeoJSON de límites de municipios, parcelas agrícolas y zonas de cultivo de arroz provenientes posiblemente del IGAC (Instituto Geográfico Agustín Codazzi) o IDEAM, en aras de delimitar el área de estudio y asociar los valores de los índices con parcelas específicas, generando mapas temáticos de estado nutricional.
+
+---
+
+# Metodología propuesta
+
+En primer lugar, es importante mencionar como se hará la elección de la zona de estudio. En aproximadamente 1 mes se realizaran múltiples visitas a centros de producción de arroz tecnificados a lo largo de todo el departamento del Tolima en la asignatura "Producción de cultivos de clima cálido" allí se tendrá de primera mano la información de la region y del estado del cultivo, y también se podrá delimitar con mayor precisión la zona de estudio. Una vez seleccionada, se procederá a realizar la obtención y procesamiento de imágenes, donde se seleccionarán fechas acordes al calendario de siembra manejado en el Tolima para el cultivo de arroz, cálculo de índices y por ultimo un análisis espacial: se espera contar con la capacidad de crear gráficos de evolución de GNDVI y NDRE a lo largo del ciclo del cultivo y también de identificar momentos de estrés nutricional o deficiencia de nitrógeno.
+Como lenguaje principal para procesar y analizar imágenes se utilizará Python y se empelaran las siguientes librerías (tentativamente): 
+
+-   **rasterio:** para la lectura y manejo de imágenes raster.
+-   **numpy:** para las operaciones matemáticas para calcular índices (GNDVI, NDRE).
+-   **geopandas:** para el manejo de shapefiles y delimitación de áreas de estudio.
+-   **matplotlib:** y seaborn para la visualización de mapas y gráficos de evolución temporal. 
+-   **earthengine-api:** para el acceso a Google Earth Engine para descargar y preprocesar imágenes.
+
+---
+
+# Bibliografía 
+
+-   Asmala Ahmad, Mohd Yazid Abu Sari, Mohd Nasran Hasan, Wan Mohd Yaakob Wan Bejuri, Hamzah Sakidin, Suliadi Firdaus Sufahani, Abd Rahman Mat Amin and Abd Wahid Rasib. (2025). *Integrating UAV-derived VARI, GNDVI, NDVI, and NDRE for phenological rice growth analysis*. ARPN Journal of Engineering and Applied Sciences, 20(9), 9709–9717. https://www.arpnjournals.org/jeas/research_papers/rp_2025/jeas_0925_9709.pdf
+
+-   de Lima IP, Jorge RG and de Lima JLMP (2021). *Remote Sensing Monitoring of Rice Fields: Towards Assessing Water Saving Irrigation Management Practices*. Frontiers in Remote Sensing 2:762093. doi: 10.3389/frsen.2021.762093 
+
+-   Jiayi Zhang, Yuanyuan Pana, Xi Tao, Binbin Wang, Qiang Cao, Yongchao Tian, Yan Zhu, Weixing Cao, Xiaojun Liu (2023). *In-season mapping of rice yield potential using Sentinel-2 multispectral imagery*. ISPRS Journal of Photogrammetry and Remote Sensing, 196, 45–58. https://doi.org/10.1016/j.isprsjprs.2023.03.012
+
+-   Yuchao Guo, Hongrui Ren (2023). *Remote sensing monitoring of maize and paddy rice planting area using GF-6 WFV red edge feature*. ELSEVIER: 126808 https://doi.org/10.1016/j.eja.2023.126808 
+
+---
